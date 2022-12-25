@@ -46,3 +46,7 @@ def register():
         return jsonify({"error": "already_exists"}), 400
 
     return jsonify({"username": user.username}), 200
+
+
+if __name__=="__main__":
+    app.run(port=25000)
