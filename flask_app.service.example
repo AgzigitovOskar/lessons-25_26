@@ -3,10 +3,9 @@ Description=Flask-app
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/app/flask-app/
-ExecStart=/opt/app/env/bin/python -m flask run -h 0.0.0.0 -p 80
-Environment="APP_SETTINGS=/etc/flask-app/config.py"
-Restart=always
+WorkingDirectory=/home/oagzigitov/flask_app/
+ExecStart=/home/oagzigitov/env/bin/python -m gunicorn -b 0.0.0.0:25000 -w  4
+
 
 [Install]
 WantedBy=multi-user.target
