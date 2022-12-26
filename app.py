@@ -49,4 +49,4 @@ def register():
 
 
 if __name__=="__main__":
-    app.run(25000)
+    app.run(port=25000)
